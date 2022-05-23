@@ -13,3 +13,5 @@ semua isi website ini saya dapat dari website Wikipidia di alamat https://id.wik
 2. Aplikasi juga dapat dibuka langsung melalui browser dengan mengetikkan alamat file index.html disimpan
 
 #### Tampilan Aplikasi
+![view](https://user-images.githubusercontent.com/103019775/169749691-0eee610a-7d76-43aa-9bc5-7256bbc7d1ad.png)
+
