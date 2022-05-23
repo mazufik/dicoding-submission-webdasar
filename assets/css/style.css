@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style Poster/Jumbotron */
+.jumbotron{
+    height: 60vh;
+    font-size: 20px;
+    padding: 60px;
+    background-image: url("../images/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+/* Style Header dan Navbar */
+header{
+    display: inline;
+}
+
+nav {
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: teal;
+    padding: 0 20px;
+}
+
+.logo {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    list-style: none;
+    padding-right: 15px;
+}
+
+.nav-links a {
+    position: relative;
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.nav-links a:hover{
+    font-weight: bold;
+    color: #fed86b;
+}
+
+.nav-links a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fed86b;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links a:hover::before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Style Isi Artikel */
+h2, h3{
+    color: #00a2c6;
+}
+
+main{
+    padding: 20px;
+    overflow: auto;
+}
+
+#content{
+    float:left;
+    width: 75%;
+}
+
+aside{
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.profile header, h1, h5, .social-media{
+    text-align: center;
+}
+
+.profile img{
+    width: 200px;
+    border-radius: 10% 0 10% 0;
+}
+
+.profile img:hover{
+    transform: translateZ(10px)
+    rotateX(20deg) rotateY(30deg);
+}
+
+.social-media img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.social-media img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.social-media img:active{
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.social-media a {
+    text-decoration: none;
+    display:inline-block;
+}
+
+.featured-images{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.featured-images-big{
+    width: 100%;
+    max-height: auto;
+}
+
+.images-wakot{
+    float: right;
+    max-width: 100%;
+    height: 180px;
+    padding: 0 0 10px 10px;
+}
+
+.images-wakot:hover{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.images-potrait{
+    float: right;
+    max-width: 100%;
+    height: auto;
+    padding: 0 0 10px 10px;
+}
+
+.images-potrait:hover{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.images-article{
+    float: left;
+    max-width: 100%;
+    height: 180px;
+    padding: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.images-article:hover{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.images-wisata{
+    padding: 20px;
+}
+
+.images-wisata img:hover{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    border: 3px solid teal;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card p{
+    text-align: justify;
+}
+
+/* Style Footer */
+footer{
+    padding: 20px;
+    color: white;
+    background-color: teal;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style untuk Responsive */
+@media screen and (max-width: 1000px){
+    #content,
+    aside{
+        width: 100%;
+        padding: 0;
+    }
+    .nav-links {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+        transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
